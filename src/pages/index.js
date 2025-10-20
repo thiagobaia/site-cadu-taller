@@ -215,7 +215,7 @@ const Home = () => {
         </p>
 
         <div className="w-full py-10">
-          <figure className="max-w-screen-md mx-auto text-center">
+          <figure className="max-w-screen mx-auto text-center">
             <svg
               className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
               aria-hidden="true"
@@ -248,7 +248,7 @@ const Home = () => {
             </figcaption>
           </figure>
 
-          <figure className="max-w-screen-md mx-auto text-center">
+          <figure className="max-w-screen mx-auto text-center">
             <svg
               className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
               aria-hidden="true"
@@ -281,7 +281,7 @@ const Home = () => {
             </figcaption>
           </figure>
 
-          <figure className="max-w-screen-md mx-auto text-center">
+          <figure className="max-w-screen mx-auto text-center">
             <svg
               className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
               aria-hidden="true"
@@ -314,7 +314,7 @@ const Home = () => {
             </figcaption>
           </figure>
 
-          <figure className="max-w-screen-md mx-auto text-center">
+          <figure className="max-w-screen mx-auto text-center">
             <svg
               className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
               aria-hidden="true"
