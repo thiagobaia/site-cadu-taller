@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 // Components
 import Layout from "../components/Layout";
 import Loader from "../components/Loader";
+import RatingView from "../components/RatingView";
 import { Link } from "gatsby";
+
+import { reviewsData } from "../data/reviewsData";
 
 // Styles
 import "../styles/global.css";
@@ -12,7 +15,6 @@ import "../styles/global.css";
 import home1 from "../images/home-foto-01.jpg";
 import sobreNos from "../images/sobre-nos.jpg";
 import preItv from "../images/pre-itv.png";
-import AvatarAvaliacao from "../images/avatar-avaliacao.png";
 
 const Home = () => {
   // Loader state
@@ -53,7 +55,7 @@ const Home = () => {
             data-aos-easing="ease-in-sine"
             alt="foto homem com ferramentas home"
           >
-            <h1 className="font-bold text-4xl font-roboto">
+            <h1 className="font-bold text-3xl md:text-4xl font-roboto">
               Mecánicos certificados altamente calificados
             </h1>
             <span>
@@ -210,142 +212,23 @@ const Home = () => {
           </Link>
         </div>
 
-        <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
-          Personas que confían en nuestro trabajo
-        </p>
+        <div className="flex flex-col py-5 max-w-6xl gap-y-10 px-5 md:px-10 lg:my-10">
+          <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
+            Personas que confían en nuestro trabajo
+          </p>
 
-        <div className="w-full py-10">
-          <figure className="max-w-screen mx-auto text-center">
-            <svg
-              className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 14"
-            >
-              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-            </svg>
-            <blockquote>
-              <p className="text-xl lg:text-2xl italic font-medium text-gray-900 dark:text-white px-5">
-                "Taller de confianza mejor de Castellón en Diagnóstico en
-                trabajo de calidad"
-              </p>
-            </blockquote>
-            <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse px-8">
-              <img
-                className="w-10 lg:w-14 rounded-full"
-                src={AvatarAvaliacao}
-                alt="Jose Padron Hernández"
-              />
-              <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">
-                <cite className="pe-3 text-xs lg:text-2xl font-medium text-gray-900 dark:text-white">
-                  Jose Padron Hernández
-                </cite>
-                <cite className="ps-3 text-sm lg:text-2xl text-gray-500 dark:text-gray-400">
-                  Opinión del cliente
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
+          {/* COMENTARIOS */}
 
-          <figure className="max-w-screen mx-auto text-center">
-            <svg
-              className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 14"
-            >
-              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-            </svg>
-            <blockquote>
-              <p className="text-xl lg:text-2xl italic font-medium text-gray-900 dark:text-white px-5">
-                "Taller de confianza mejor de Castellón en Diagnóstico en
-                trabajo de calidad"
-              </p>
-            </blockquote>
-            <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse px-8">
-              <img
-                className="w-10 lg:w-14 rounded-full"
-                src={AvatarAvaliacao}
-                alt="Jose Padron Hernández"
-              />
-              <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">
-                <cite className="pe-3 text-xs lg:text-2xl font-medium text-gray-900 dark:text-white">
-                  Jose Padron Hernández
-                </cite>
-                <cite className="ps-3 text-sm lg:text-2xl text-gray-500 dark:text-gray-400">
-                  Opinión del cliente
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure className="max-w-screen mx-auto text-center">
-            <svg
-              className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 14"
-            >
-              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-            </svg>
-            <blockquote>
-              <p className="text-xl lg:text-2xl italic font-medium text-gray-900 dark:text-white px-5">
-                "Taller de confianza mejor de Castellón en Diagnóstico en
-                trabajo de calidad"
-              </p>
-            </blockquote>
-            <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse px-8">
-              <img
-                className="w-10 lg:w-14 rounded-full"
-                src={AvatarAvaliacao}
-                alt="Jose Padron Hernández"
-              />
-              <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">
-                <cite className="pe-3 text-xs lg:text-2xl font-medium text-gray-900 dark:text-white">
-                  Jose Padron Hernández
-                </cite>
-                <cite className="ps-3 text-sm lg:text-2xl text-gray-500 dark:text-gray-400">
-                  Opinión del cliente
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure className="max-w-screen mx-auto text-center">
-            <svg
-              className="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 14"
-            >
-              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-            </svg>
-            <blockquote>
-              <p className="text-xl lg:text-2xl italic font-medium text-gray-900 dark:text-white px-5">
-                "Taller de confianza mejor de Castellón en Diagnóstico en
-                trabajo de calidad"
-              </p>
-            </blockquote>
-            <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse px-8">
-              <img
-                className="w-10 lg:w-14 rounded-full"
-                src={AvatarAvaliacao}
-                alt="Jose Padron Hernández"
-              />
-              <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">
-                <cite className="pe-3 text-xs lg:text-2xl font-medium text-gray-900 dark:text-white">
-                  Jose Padron Hernández
-                </cite>
-                <cite className="ps-3 text-sm lg:text-2xl text-gray-500 dark:text-gray-400">
-                  Opinión del cliente
-                </cite>
-              </div>
-            </figcaption>
-          </figure>
+          {reviewsData.map((item, index) => (
+            <RatingView
+              key={index}
+              name={item.name}
+              avatar={item.avatar}
+              joinDate={item.joinDate}
+              rating={item.rating}
+              text={item.text}
+            />
+          ))}
         </div>
       </div>
     </Layout>

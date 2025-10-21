@@ -5,7 +5,7 @@ const BlogCard = ({ title, content }) => {
   return (
     <a
       href="/contact"
-      className="block w-full max-w-xs p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
+      className="block w-full py-10 px-10 lg:py-5 lg:px-5 lg:max-w-[376px]  bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100"
     >
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {title}
