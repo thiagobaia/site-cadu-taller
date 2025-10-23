@@ -4,9 +4,12 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Loader from "../components/Loader";
 import RatingView from "../components/RatingView";
+import AccordionTaller from "../components/AccordionTaller";
 import { Link } from "gatsby";
 
+// Data mocks
 import { reviewsData } from "../data/reviewsData";
+import { accordionData } from "../data/accordionData";
 
 // Styles
 import "../styles/global.css";
@@ -15,6 +18,7 @@ import "../styles/global.css";
 import home1 from "../images/home-foto-01.jpg";
 import sobreNos from "../images/sobre-nos.jpg";
 import preItv from "../images/pre-itv.png";
+import ContentCarousel from "../components/Slide";
 
 const Home = () => {
   // Loader state
@@ -49,7 +53,7 @@ const Home = () => {
           />
 
           <div
-            className="flex flex-col gap-y-5 w-full bg-white px-10 py-5 lg:py-5 lg:absolute lg:text-white lg:bg-black/25 lg:bottom-0 lg:bg-[rgba(0, 0, 0, 0.5)]"
+            className="flex flex-col gap-y-5 w-full bg-white px-10 py-10 lg:py-14 lg:absolute lg:text-white lg:bg-black/25 lg:bottom-0 lg:bg-[rgba(0, 0, 0, 0.5)]"
             data-aos="fade-left"
             data-aos-delay="200" // Começa com 0.5s de atraso
             data-aos-easing="ease-in-sine"
@@ -75,8 +79,8 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center justify-center max-w-6xl lg:flex-row lg:gap-x-5 gap-y-5 px-10 py-12 bg-blue-700 my-14"
-          data-aos="zoom-in-up"
+          className="flex flex-col items-center justify-center max-w-6xl lg:flex-row lg:gap-x-5 gap-y-5 px-10 py-10 lg:py-20 bg-blue-700"
+          data-aos="fade-right"
           data-aos-delay="200" // Começa com 0.5s de atraso
           data-aos-easing="ease-in-sine"
         >
@@ -114,9 +118,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-full max-w-6xl">
-          <div className="flex flex-col  gap-y-5 w-full">
-            <div className="flex flex-col gap-y-5 px-5 py-10">
+        <div className="flex flex-col w-full max-w-6xl bg-white pt-10 pb-14 lg:pt-10 lg:pb-24">
+          <div className="flex flex-col gap-y-5 w-full">
+            <div className="flex flex-col gap-y-5 px-5 max-w-[800px]">
               <p className="font-bold font-roboto text-3xl md:text-5xl">
                 ¿Por qué elegirnos?
               </p>
@@ -127,11 +131,11 @@ const Home = () => {
             </div>
             <div className="flex flex-col w-full gap-y-5 lg:flex-row lg:flex-wrap lg:gap-x-5">
               <div className="flex flex-col">
-                <div className="flex flex-col gap-y-5 bg-white p-5 lg:w-full lg:max-w-[566px]">
-                  <p className="font-bold font-roboto text-2xl text-center md:text-start md:text-3xl">
+                <div className="flex flex-col gap-y-5 bg-white border-2 border-black rounded-2xl p-5 lg:w-full lg:max-w-[566px]">
+                  <p className="font-bold font-roboto text-2xl text-black text-center md:text-start md:text-3xl">
                     Taller Moderno
                   </p>
-                  <p className="font-roboto text-xl text-center md:text-start font-normal">
+                  <p className="font-roboto text-black  text-xl text-center md:text-start font-normal">
                     Diagnóstico de vanguardia y técnicos certificados.
                     Garantizamos rapidez, transparencia y durabilidad para su
                     vehículo. Tecnología y experiencia sin incertidumbre.
@@ -139,33 +143,33 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-y-2.5 lg:flex-row">
-                <div className="flex flex-col gap-y-5 bg-white p-5 lg:w-full lg:max-w-[566px]">
-                  <p className="font-bold font-roboto text-2xl text-center md:text-start md:text-3xl">
+                <div className="flex flex-col gap-y-5 bg-white border-2 border-black rounded-2xl p-5 lg:w-full lg:max-w-[566px]">
+                  <p className="font-bold text-black  font-roboto text-2xl text-center md:text-start md:text-3xl">
                     Crecimiento Sostenible
                   </p>
-                  <p className="font-roboto text-xl text-center md:text-start font-normal">
+                  <p className="font-roboto text-black text-xl text-center md:text-start font-normal">
                     El desarrollo del talento interno garantiza la sucesión del
                     liderazgo y la longevidad del negocio.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col gap-y-2.5 lg:flex-row">
-                <div className="flex flex-col gap-y-5 bg-white p-5 lg:max-w-[566px]">
-                  <p className="font-bold font-roboto text-2xl text-center md:text-start md:text-3xl">
+                <div className="flex flex-col gap-y-5 bg-white border-2 border-black rounded-2xl p-5 lg:max-w-[566px]">
+                  <p className="font-bold text-black font-roboto text-2xl text-center md:text-start md:text-3xl">
                     Mayor productividad y calidad
                   </p>
-                  <p className="font-roboto text-xl text-center md:text-start font-normal">
+                  <p className="font-roboto text-black  text-xl text-center md:text-start font-normal">
                     Los equipos de alto rendimiento generan resultados
                     superiores.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col gap-y-2.5 lg:flex-row">
-                <div className="flex flex-col gap-y-5 bg-white p-5 lg:w-full lg:max-w-[566px]">
-                  <p className="font-bold font-roboto text-2xl text-center md:text-start md:text-3xl">
+                <div className="flex flex-col gap-y-5 bg-white border-2 border-black rounded-2xl p-5 lg:w-full lg:max-w-[566px]">
+                  <p className="font-bold font-roboto text-black text-2xl text-center md:text-start md:text-3xl">
                     Ventaja Competitiva
                   </p>
-                  <p className="font-roboto text-xl text-center md:text-start font-normal">
+                  <p className="font-roboto text-black text-xl text-center md:text-start font-normal">
                     La innovación generada por mentes brillantes garantiza que
                     la empresa destaque entre la competencia.
                   </p>
@@ -175,7 +179,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center flex-wrap bg-blue-700 py-12 relative max-w-6xl mt-20 mb-10">
+        <div className="flex justify-center flex-wrap bg-blue-700 py-12 relative max-w-6xl">
           <img
             className="w-28 lg:w-40 rounded-full absolute -top-12 lg:-top-16 left-10"
             src={preItv}
@@ -212,23 +216,40 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col py-5 max-w-6xl gap-y-10 px-5 md:px-10 lg:my-10">
+        <div className="flex flex-col w-full py-10 max-w-6xl gap-y-10 px-5 bg-white md:px-10 lg:pt-16 lg:pb-16">
           <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
             Personas que confían en nuestro trabajo
           </p>
 
           {/* COMENTARIOS */}
 
-          {reviewsData.map((item, index) => (
-            <RatingView
-              key={index}
-              name={item.name}
-              avatar={item.avatar}
-              joinDate={item.joinDate}
-              rating={item.rating}
-              text={item.text}
-            />
-          ))}
+          <ContentCarousel>
+            {reviewsData.map((item, index) => (
+              <RatingView
+                key={index}
+                name={item.name}
+                avatar={item.avatar}
+                joinDate={item.joinDate}
+                rating={item.rating}
+                text={item.text}
+              />
+            ))}
+          </ContentCarousel>
+        </div>
+
+        <div className="flex flex-col w-full max-w-6xl bg-white py-16">
+          <div className="border-2 border-black  px-2.5 pb-9">
+            <p className="text-3xl text-center font-bold py-5 lg:text-4xl text-black">
+              Hechos y preguntas
+            </p>
+            {accordionData.map((item, index) => (
+              <AccordionTaller
+                key={index}
+                title={item.title}
+                resp={item.resp}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
