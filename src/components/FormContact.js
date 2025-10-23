@@ -43,7 +43,7 @@ export const ContactForm = () => {
     if (
       EMAILJS_CONFIG.SERVICE_ID === "service_b7ux5f7" ||
       EMAILJS_CONFIG.TEMPLATE_ID === "template_3bwaitw" ||
-      EMAILJS_CONFIG.PUBLIC_KEY === "cqFLZjQVmnbdE"
+      EMAILJS_CONFIG.PUBLIC_KEY === "AVY8-cqFLZjQVmnbd"
     ) {
       // Simulação de erro se as chaves não forem alteradas
       setTimeout(() => {
