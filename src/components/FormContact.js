@@ -1,105 +1,113 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+// Chaves de configuração (substitua por variáveis de ambiente se preferir)
+const SERVICE_ID = "service_b7ux5f7";
+const TEMPLATE_ID = "template_8pv74ua";
+const PUBLIC_KEY = "vEMD3glLOHHSHvEfC";
+
 const ContactForm = () => {
-  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState("");
 
-  const sendEmail = (e) => {
-    e.preventDefault(); // Impede o recarregamento da página
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    // Exibe um feedback para o usuário (opcional)
-    alert("Enviando mensagem...");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setStatus("");
 
+    // Enviar o email via EmailJS
     emailjs
-      .sendForm(
-        process.env.GATSBY_EMAILJS_SERVICE_ID,
-        process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-        form.current, // O elemento <form>
-        process.env.GATSBY_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-          alert("Mensagem enviada com sucesso! ✅");
-          form.current.reset(); // Limpa o formulário após o envio
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          alert("Ocorreu um erro ao enviar a mensagem. ❌");
-        }
-      );
+      .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((response) => {
+        console.log("Email enviado com sucesso!", response);
+        setStatus("Mensagem enviada com sucesso!");
+        setFormData({ name: "", email: "", message: "" }); // Limpar formulário
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar email:", error);
+        setStatus("Erro ao enviar mensagem. Tente novamente.");
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-        Fale Conosco
-      </h2>
-      <form ref={form} onSubmit={sendEmail} className="space-y-6">
-        {/* Campo Nome */}
+    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
+      <h2>Contato</h2>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label
-            htmlFor="from_name"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Seu Nome
-          </label>
+          <label htmlFor="name">Nome:</label>
           <input
             type="text"
-            name="from_name" // !! Importante !!
-            id="from_name"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            placeholder="João Silva"
+            style={{ width: "100%", padding: "8px", marginBottom: "10px" }}
           />
         </div>
-
-        {/* Campo Email */}
         <div>
-          <label
-            htmlFor="from_email"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Seu Email
-          </label>
+          <label htmlFor="email">Email:</label>
           <input
             type="email"
-            name="from_email" // !! Importante !!
-            id="from_email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            placeholder="joao.silva@exemplo.com"
+            style={{ width: "100%", padding: "8px", marginBottom: "10px" }}
           />
         </div>
-
-        {/* Campo Mensagem */}
         <div>
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-1"
-          >
-            Mensagem
-          </label>
+          <label htmlFor="message">Mensagem:</label>
           <textarea
-            name="message" // !! Importante !!
             id="message"
-            rows="4"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Sua mensagem aqui..."
-          ></textarea>
+            rows="5"
+            style={{ width: "100%", padding: "8px", marginBottom: "10px" }}
+          />
         </div>
-
-        {/* Botão Enviar */}
-        <div>
-          <button
-            type="submit"
-            className="w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200"
-          >
-            Enviar Mensagem
-          </button>
-        </div>
+        <button
+          type="submit"
+          disabled={isSending}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: isSending ? "#ccc" : "#007bff",
+            color: "white",
+            border: "none",
+            cursor: isSending ? "not-allowed" : "pointer",
+          }}
+        >
+          {isSending ? "Enviando..." : "Enviar"}
+        </button>
       </form>
+      {status && (
+        <p
+          style={{
+            marginTop: "10px",
+            color: status.includes("Erro") ? "red" : "green",
+          }}
+        >
+          {status}
+        </p>
+      )}
     </div>
   );
 };
