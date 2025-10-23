@@ -7,7 +7,7 @@ import React, { useState, useRef } from "react";
 const EMAILJS_CONFIG = {
   SERVICE_ID: "service_b7ux5f7", // Ex: "service_xxxxx"
   TEMPLATE_ID: "template_3bwaitw", // Ex: "template_yyyyy"
-  PUBLIC_KEY: "AVY8-cqFLZjQVmnbdE", // Ex: "user_zzzzz"
+  PUBLIC_KEY: "AVY8-cqFLZjQVmnbd", // Ex: "user_zzzzz"
   API_URL: "https://api.emailjs.com/api/v1.0/email/send",
 };
 
