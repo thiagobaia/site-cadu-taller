@@ -5,9 +5,9 @@ import React, { useState, useRef } from "react";
 // O EmailJS usa uma API POST simples que pode ser acessada via fetch.
 // ====================================================================
 const EMAILJS_CONFIG = {
-  SERVICE_ID: "service_b7ux5f7", // Ex: "service_xxxxx"
-  TEMPLATE_ID: "template_3bwaitw", // Ex: "template_yyyyy"
-  PUBLIC_KEY: "AVY8-cqFLZjQVmnbd", // Ex: "user_zzzzz"
+  SERVICE_ID: "service_5llnhpd", // Ex: "service_xxxxx"
+  TEMPLATE_ID: "template_th56yct", // Ex: "template_yyyyy"
+  PUBLIC_KEY: "iBaxqO5tKhkDJsp5A", // Ex: "user_zzzzz"
   API_URL: "https://api.emailjs.com/api/v1.0/email/send",
 };
 
@@ -41,9 +41,9 @@ export const ContactForm = () => {
     setStatus("idle");
 
     if (
-      EMAILJS_CONFIG.SERVICE_ID === "service_b7ux5f7" ||
-      EMAILJS_CONFIG.TEMPLATE_ID === "template_3bwaitw" ||
-      EMAILJS_CONFIG.PUBLIC_KEY === "AVY8-cqFLZjQVmnbd"
+      EMAILJS_CONFIG.SERVICE_ID === "service_5llnhpd" ||
+      EMAILJS_CONFIG.TEMPLATE_ID === "template_th56yct" ||
+      EMAILJS_CONFIG.PUBLIC_KEY === "iBaxqO5tKhkDJsp5A"
     ) {
       // Simulação de erro se as chaves não forem alteradas
       setTimeout(() => {
