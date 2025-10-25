@@ -2,11 +2,6 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../../.flowbite-react/class-list.json";
 
-@theme {
-  --breakpoint-3xl: 120rem;
-  --breakpoint-4xl: 160rem;
-}
-
 body {
   @apply bg-[#ecf0fb];
 }

@@ -2,7 +2,7 @@ import React from "react";
 import StarIcon from "./StarIcon";
 export const RatingView = ({ name, joinDate, rating, text, avatar }) => {
   return (
-    <div>
+    <div className="border p-5 border-gray-400">
       <article>
         <div className="flex items-center mb-4">
           <img
@@ -14,7 +14,7 @@ export const RatingView = ({ name, joinDate, rating, text, avatar }) => {
           <div className="font-medium">
             <p className="text-2xl md:text-3xl">
               {name}
-              <time className="block text-gray-500 text-2xl md:text-3xl">
+              <time className="block text-gray-500 text-lg">
                 Unido {joinDate}
               </time>
             </p>
@@ -24,7 +24,7 @@ export const RatingView = ({ name, joinDate, rating, text, avatar }) => {
         <div className="flex items-center mb-1 space-x-1 rtl:space-x-reverse">
           <StarIcon numberStars={rating} />
         </div>
-        <p className="mb-2 text-gray-500 text-2xl md:text-3xl">{text}</p>
+        <p className="mb-2 text-gray-500 text-2xl">{text}</p>
       </article>
     </div>
   );

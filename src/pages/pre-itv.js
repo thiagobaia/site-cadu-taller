@@ -9,7 +9,12 @@ const PreItv = () => {
     <Layout>
       <div>
         <div className="flex flex-col w-full items-center">
-          <div className="max-w-6xl gap-y-10 px-5 md:px-10 flex flex-col items-center justify-center w-screen bg-blue-700 py-40">
+          <div
+            className="max-w-6xl gap-y-10 px-5 md:px-10 flex flex-col items-center justify-center w-screen bg-blue-700 py-40"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-sine"
+          >
             <p className="text-2xl md:text-4xl lg:text-6xl text-white font-semibold mb-3.5">
               REVISIÓN PRE-ITV
             </p>
@@ -22,7 +27,12 @@ const PreItv = () => {
         </div>
 
         <div className="flex justify-center flex-col items-center w-full">
-          <div className="w-full flex flex-col justify-center lg:max-w-6xl">
+          <div
+            className="w-full flex flex-col justify-center lg:max-w-6xl"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-sine"
+          >
             <div className=" w-full flex justify-center mt-10">
               <p className="text-2xl md:text-4xl lg:text-6xl text-center text-gray-950 font-semibold mb-3.5">
                 Principales cualidades de Cadu Taller
@@ -42,7 +52,12 @@ const PreItv = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center w-full">
-          <div className="flex justify-center flex-wrap bg-blue-700 py-12 relative lg:max-w-6xl lg:mt-10">
+          <div
+            className="flex justify-center flex-wrap bg-blue-700 py-12 relative lg:max-w-6xl lg:mt-10"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-sine"
+          >
             <img
               className="w-28 lg:w-40 rounded-full absolute -top-12 lg:-top-18 left-10"
               src={preItv}
@@ -80,7 +95,12 @@ const PreItv = () => {
           </div>
         </div>
 
-        <div className="w-full py-10">
+        <div
+          className="w-full py-10"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-sine"
+        >
           <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center my-20">
             Personas que confían en nuestro trabajo
           </p>

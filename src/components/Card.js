@@ -1,6 +1,5 @@
 import React from "react";
 
-// Este é um componente de cartão reutilizável para blog ou notícias.
 const BlogCard = ({ title, content }) => {
   return (
     <a

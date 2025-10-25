@@ -10,7 +10,7 @@ export const AccordionTaller = ({ title, resp }) => {
   return (
     <Accordion collapseAll>
       <AccordionPanel>
-        <AccordionTitle className="border-2 border-black rounded-md">
+        <AccordionTitle className="border border-gray-400 rounded-md">
           <p className="px-2.5 w-full text-[18px] md:text-2xl">{title}</p>
         </AccordionTitle>
         <AccordionContent>
