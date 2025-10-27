@@ -65,7 +65,7 @@ const ContactForm = () => {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="block text-sm font-medium text-gray-700"
           >
             Nome:
           </label>
@@ -76,13 +76,13 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="block text-sm font-medium text-gray-700"
           >
             Email:
           </label>
@@ -93,13 +93,13 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="block text-sm font-medium text-gray-700"
           >
             Mensagem:
           </label>
@@ -110,7 +110,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows="5"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -118,7 +118,7 @@ const ContactForm = () => {
           <div role="status">
             <svg
               aria-hidden="true"
-              class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              class="inline w-8 h-8 text-gray-200 animate-spin  fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -153,10 +153,10 @@ const ContactForm = () => {
             <div
               className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
                 toast.type === "success"
-                  ? "bg-green-100 text-green-500 dark:bg-green-800 dark:text-green-200"
+                  ? "bg-green-100 text-green-500"
                   : toast.type === "error"
-                  ? "bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200"
-                  : "bg-orange-100 text-orange-500 dark:bg-orange-700 dark:text-orange-200"
+                  ? "bg-red-100 text-red-500"
+                  : "bg-orange-100 text-orange-500"
               }`}
             >
               {toast.type === "success" && <HiCheck className="h-5 w-5" />}

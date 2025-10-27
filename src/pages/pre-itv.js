@@ -101,7 +101,7 @@ const PreItv = () => {
           data-aos-delay="200"
           data-aos-easing="ease-in-sine"
         >
-          <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center my-20">
+          <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
             Personas que confían en nuestro trabajo
           </p>
           <figure className="max-w-3xl mx-auto text-center">

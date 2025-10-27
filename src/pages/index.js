@@ -288,7 +288,7 @@ const Home = () => {
         </div>
 
         <div
-          className="flex justify-center flex-wrap bg-blue-700 py-12 max-w-6xl my-10"
+          className="flex justify-center flex-wrap bg-blue-700 py-24 max-w-6xl"
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-easing="ease-in-sine"
@@ -323,7 +323,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col w-full max-w-6xl bg-white px-5 lg:py-10">
+        <div className="flex flex-col py-5 w-full max-w-6xl bg-white px-5 lg:py-10">
           <div
             className="border border-gray-400  px-2.5 pb-9"
             data-aos="fade-left"

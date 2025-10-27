@@ -13,15 +13,18 @@ const About = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <Link
-          to="/"
+        <div
           className="flex flex-col-reverse items-center bg-white lg:w-full  md:flex-row hover:bg-gray-100"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-sine"
         >
           <img
             className="object-cover object-top w-full  h-[550px] md:w-auto lg:h-[600px] lg:w-auto "
             src={PerfilPhoto}
             alt=""
           />
+
           <div className="flex flex-col gap-y-2.5 justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl lg:text-4xl font-bold tracking-tight text-gray-900">
               CADU TALLER ¡SOMOS TU MEJOR OPCIÓN!
@@ -38,7 +41,7 @@ const About = () => {
             </p>
             <Link
               to="/about"
-              className="flex items-center font-roboto justify-center lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
+              className="flex items-center font-roboto justify-center invisible lg:visible lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
             >
               Contáctanos
               <svg
@@ -58,16 +61,43 @@ const About = () => {
               </svg>
             </Link>
           </div>
+        </div>
+
+        <Link
+          to="/about"
+          className="flex items-center font-roboto justify-center visible my-5 lg:invisible lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
+        >
+          Contáctanos
+          <svg
+            className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
         </Link>
 
-        <div className="py-12 relative">
+        <div
+          className="py-12 relative"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-sine"
+        >
           <img
             src={BannerPhoto}
             alt="Homem Trocando Óleo"
             className="w-full h-32  md:h-72 object-cover object-left-bottom"
           />
           <div className="text-center mt-4 relative md:absolute w-full md:bg-black/50 md:bg-[rgba(0, 0, 0, 0.5)] md:top-40 lg:top-45 md:p-5">
-            <p className="text-2xl p-2.5 font-semibold text-white md:text-white bg-black/50 bg-[rgba(0, 0, 0, 0.5)] md:bg-transparent absolute -top-24 md:py-[13px] md:-top-20 md:text-4xl md:static">
+            <p className="text-2xl p-2.5 w-full font-semibold text-white  bg-black/50 bg-[rgba(0, 0, 0, 0.5)] md:bg-transparent absolute -top-[99px]  md:bottom-0 md:py-[13px] md:text-4xl md:static">
               ¡Ven y haz tu revisión Pre-ITV!
             </p>
             <p className="text-gray-600 mt-2 md:text-white">
@@ -87,7 +117,12 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-sine"
+        >
           <div className="bg-white rounded-lg shadow-lg p-4 text-center">
             <img
               src={Equipe1}
