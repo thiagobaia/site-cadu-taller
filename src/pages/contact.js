@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Layout>
       <div
-        className="max-w-6xl mx-auto lg:flex lg:justify-center lg:items-center mt-5 lg:my-20 lg:gap-x-5 lg:py-10 pt-10 bg-white"
+        className="max-w-6xl mx-auto lg:flex lg:justify-center lg:items-center mt-5 lg:my-20 lg:gap-x-5 lg:py-10 pt-10 bg-white overflow-x-hidden"
         data-aos="fade-up"
         data-aos-delay="200"
         data-aos-easing="ease-in-sine"

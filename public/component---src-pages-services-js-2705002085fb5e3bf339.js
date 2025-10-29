@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunksite_cadu_taller=self.webpackChunksite_cadu_taller||[]).push([[371],{4355:function(e,l,t){t.r(l);var a=t(6540),u=t(2053);l.default=()=>a.createElement(u.A,null,a.createElement("h1",null,"Services Page"))}}]);
-//# sourceMappingURL=component---src-pages-services-js-2705002085fb5e3bf339.js.map

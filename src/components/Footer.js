@@ -100,23 +100,23 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-6">Pre-Itv</h3>
             <ul className="text-blue-100 text-sm space-y-3 lg:flex lg:flex-col lg:justify-end lg:items-end">
               <li>
-                <Link to="/saas-development" className="hover:text-white">
-                  SaaS Development
+                <Link to="/pre-itv" className="hover:text-white">
+                  Revisión completa
                 </Link>
               </li>
               <li>
-                <Link to="/our-products" className="hover:text-white">
-                  Our Products
+                <Link to="/pre-itv" className="hover:text-white">
+                  Equipos de diagnóstico
                 </Link>
               </li>
               <li>
-                <Link to="/user-flow" className="hover:text-white">
-                  User Flow
+                <Link to="/pre-itv" className="hover:text-white">
+                  Mecánicos cualificados
                 </Link>
               </li>
               <li>
-                <Link to="/user-strategy" className="hover:text-white">
-                  User Strategy
+                <Link to="/pre-itv" className="hover:text-white">
+                  Servicio rápido
                 </Link>
               </li>
             </ul>

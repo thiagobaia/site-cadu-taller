@@ -7,8 +7,8 @@ import qualities from "../data/qualities";
 const PreItv = () => {
   return (
     <Layout>
-      <div>
-        <div className="flex flex-col w-full items-center">
+      <div className="overflow-x-hidden">
+        <div className="flex flex-col w-full items-center overflow-x-hidden">
           <div
             className="max-w-6xl gap-y-10 px-5 md:px-10 flex flex-col items-center justify-center w-screen bg-blue-700 py-40"
             data-aos="fade-right"

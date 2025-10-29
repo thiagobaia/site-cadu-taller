@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center overflow-x-hidden">
         <div className="flex flex-col items-center justify-center max-w-6xl lg:items-start relative">
           <img
             src={home1}

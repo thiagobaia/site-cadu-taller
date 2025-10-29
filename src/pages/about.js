@@ -12,7 +12,7 @@ import { Link } from "gatsby";
 const About = () => {
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8 overflow-x-hidden">
         <div
           className="flex flex-col-reverse items-center bg-white lg:w-full  md:flex-row hover:bg-gray-100"
           data-aos="fade-right"
@@ -41,7 +41,7 @@ const About = () => {
             </p>
             <Link
               to="/about"
-              className="flex items-center font-roboto justify-center invisible lg:visible lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
+              className="flex items-center font-roboto justify-center invisible lg:visible lg:justify-start lg:max-w-[180px] px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
             >
               Contáctanos
               <svg

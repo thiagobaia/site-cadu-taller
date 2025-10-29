@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksite_cadu_taller=self.webpackChunksite_cadu_taller||[]).push([[125],{3331:function(e,a,t){t.r(a);var l=t(6540),n=t(8693);a.default=()=>l.createElement("main",null,l.createElement("h1",null,"Página Não Encontrada"),l.createElement("p",null,"Desculpe, a página que você está procurando não existe."),l.createElement(n.Link,{to:"/"},"Voltar para a Home"))}}]);
+//# sourceMappingURL=component---src-pages-404-js-cd049789dec067d24464.js.map
