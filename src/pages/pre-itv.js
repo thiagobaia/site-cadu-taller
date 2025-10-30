@@ -34,7 +34,7 @@ const PreItv = () => {
             data-aos-easing="ease-in-sine"
           >
             <div className=" w-full flex justify-center mt-10">
-              <p className="text-2xl md:text-4xl lg:text-6xl text-center text-gray-950 font-semibold mb-3.5">
+              <p className="text-3xl font-bold px-5 md:text-5xl lg:text-6xl text-center text-gray-950 mb-3.5">
                 Principales cualidades de Cadu Taller
               </p>
             </div>
