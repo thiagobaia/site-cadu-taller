@@ -30,7 +30,7 @@ const Services = () => {
           <div className="lg:col-span-5 lg:mt-0">
             <Link to="/contact">
               <img
-                className="mb-4 h-56 w-56 sm:h-96 sm:w-96 md:h-full md:w-full"
+                className="mb-4 h-auto w-full sm:h-96 sm:w-96 md:h-full md:w-full"
                 src={itvCar}
                 alt="peripherals"
               />
