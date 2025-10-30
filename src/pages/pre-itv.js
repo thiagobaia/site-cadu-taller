@@ -10,7 +10,7 @@ const PreItv = () => {
       <div className="overflow-x-hidden">
         <div className="flex flex-col w-full items-center overflow-x-hidden">
           <div
-            className="max-w-6xl gap-y-10 px-5 md:px-10 flex flex-col items-center justify-center w-screen bg-blue-700 py-40"
+            className="max-w-6xl gap-y-10 px-5 md:px-10 flex flex-col items-center justify-center w-screen bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600 py-40"
             data-aos="fade-right"
             data-aos-delay="200"
             data-aos-easing="ease-in-sine"
@@ -53,7 +53,7 @@ const PreItv = () => {
 
         <div className="flex flex-col justify-center items-center w-full">
           <div
-            className="flex justify-center flex-wrap bg-blue-700 py-12 relative lg:max-w-6xl lg:mt-10"
+            className="flex justify-center flex-wrap bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600  py-12 relative lg:max-w-6xl lg:mt-10"
             data-aos="fade-right"
             data-aos-delay="200"
             data-aos-easing="ease-in-sine"

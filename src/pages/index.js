@@ -18,6 +18,7 @@ import "../styles/global.css";
 import home1 from "../images/home-foto-01.jpg";
 import sobreNos from "../images/sobre-nos.jpg";
 import preItv from "../images/pre-itv.png";
+import itvCar from "../images/revisión-pre-itv.webp";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,7 +77,7 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="flex flex-col items-center justify-center max-w-6xl lg:flex-row lg:gap-x-5 gap-y-5 px-10 py-10 lg:py-20 bg-blue-700"
+          className="flex flex-col items-center justify-center max-w-6xl lg:flex-row lg:gap-x-5 gap-y-5 px-10 py-10 lg:py-20 bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600"
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-easing="ease-in-sine"
@@ -217,7 +218,7 @@ const Home = () => {
         </div>
 
         <div
-          className="flex justify-center flex-wrap bg-blue-700 py-12 relative max-w-6xl"
+          className="flex justify-center flex-wrap bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600 py-12 relative max-w-6xl"
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-easing="ease-in-sine"
@@ -288,7 +289,7 @@ const Home = () => {
         </div>
 
         <div
-          className="flex justify-center flex-wrap bg-blue-700 py-24 max-w-6xl"
+          className="flex justify-center flex-wrap bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600 py-24 max-w-6xl"
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-easing="ease-in-sine"
@@ -343,6 +344,35 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <section className="bg-transparent px-4 py-8 lg:py-0">
+        <div className="mx-auto grid max-w-6xl bg-gray-50 p-4 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16">
+          <div className="lg:col-span-5 lg:mt-0">
+            <Link to="/contact">
+              <img
+                className="mb-4 h-auto w-full sm:h-96 sm:w-96 md:h-full md:w-full"
+                src={itvCar}
+                alt="peripherals"
+              />
+            </Link>
+          </div>
+          <div className="me-auto place-self-center lg:col-span-7">
+            <h1 className="mb-3 text-2xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl">
+              Póngase en contacto para solicitar su presupuesto.
+            </h1>
+            <p className="mb-6 text-gray-500">
+              Estamos listos para servirle con eficiencia y calidad.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+            >
+              {" "}
+              Solicitar presupuesto{" "}
+            </Link>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };

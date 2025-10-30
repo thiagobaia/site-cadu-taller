@@ -3,9 +3,9 @@ import Layout from "../components/Layout";
 import PerfilPhoto from "../images/cadu-taller-sobre-nos.jpeg";
 import BannerPhoto from "../images/banner-nosotros.jpg";
 
-import Equipe1 from "../images/equipe-1.jpg";
-import Equipe2 from "../images/equipe-2.jpg";
-import Equipe3 from "../images/equipe-3.jpg";
+//import Equipe1 from "../images/equipe-1.jpg";
+//import Equipe2 from "../images/equipe-2.jpg";
+//import Equipe3 from "../images/equipe-3.jpg";
 
 import { Link } from "gatsby";
 
@@ -41,7 +41,7 @@ const About = () => {
             </p>
             <Link
               to="/about"
-              className="flex items-center font-roboto justify-center invisible lg:visible lg:justify-start lg:max-w-[180px] px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
+              className="flex items-center font-roboto justify-center invisible lg:visible lg:justify-start lg:max-w-[180px] px-5 py-3 text-base font-medium  text-white bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600 rounded-sm hover:bg-linear-to-r hover:from-fuchsia-600 hover:via-blue-500 hover:to-blue-700  focus:ring-4 focus:ring-white-300"
             >
               Contáctanos
               <svg
@@ -65,7 +65,7 @@ const About = () => {
 
         <Link
           to="/about"
-          className="flex items-center font-roboto justify-center visible my-5 lg:invisible lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-blue-700 rounded-sm hover:bg-blue-600 focus:ring-4 focus:ring-white-300"
+          className="flex items-center font-roboto justify-center visible my-5 lg:invisible lg:justify-start lg:max-w-2xs px-5 py-3 text-base font-medium  text-white bg-linear-to-r from-blue-700 via-blue-500 to-fuchsia-600 rounded-sm hover:bg-linear-to-r hover:from-fuchsia-600 hover:via-blue-500 hover:to-blue-700 focus:ring-4 focus:ring-white-300"
         >
           Contáctanos
           <svg
@@ -107,94 +107,109 @@ const About = () => {
           </div>
         </div>
 
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">
-            Conozca a nuestro equipo de profesionales
-          </h2>
-          <p className="text-gray-600 mt-2">
-            Nuestro equipo está formado por especialistas dedicados al cuidado
-            de su vehículo.
-          </p>
-        </div>
-
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-easing="ease-in-sine"
-        >
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe1}
-              alt="Mecânico 1"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">João Silva</h3>
-            <p className="text-gray-600">Especialista em Mecânica Geral</p>
+        <section className="bg-white">
+          <div className="py-8 px-4 mx-auto max-w-7xl text-center lg:py-16 lg:px-6">
+            <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+                Conozca a nuestro equipo de profesionales
+              </h2>
+              <p className="font-light text-gray-500 sm:text-xl">
+                Nuestro equipo está formado por especialistas dedicados al
+                cuidado de su vehículo.
+              </p>
+            </div>
+            <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                  alt="Bonnie Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Bonnie Green</Link>
+                </h3>
+                <p>CEO/Co-founder</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
+                  alt="Helene Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Helene Engels</Link>
+                </h3>
+                <p>CTO/Co-founder</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                  alt="Jese Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Jese Leos</Link>
+                </h3>
+                <p>SEO & Marketing</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+                  alt="Joseph Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Joseph Mcfall</Link>
+                </h3>
+                <p>Sales</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png"
+                  alt="Sofia Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Lana Byrd</Link>
+                </h3>
+                <p>Web Designer</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png"
+                  alt="Leslie Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Leslie Livingston</Link>
+                </h3>
+                <p>Graphic Designer</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="Michael Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Michael Gough</Link>
+                </h3>
+                <p>React Developer</p>
+              </div>
+              <div className="text-center text-gray-500">
+                <img
+                  className="mx-auto mb-4 w-36 h-36 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png"
+                  alt="Neil Avatar"
+                />
+                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                  <Link to="#">Neil Sims</Link>
+                </h3>
+                <p>Vue.js Developer</p>
+              </div>
+            </div>
           </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe2}
-              alt="Eletricista 1"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">
-              Maria Santos
-            </h3>
-            <p className="text-gray-600">Especialista em Elétrica Automotiva</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe3}
-              alt="Funilaria 1"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">
-              Pedro Oliveira
-            </h3>
-            <p className="text-gray-600">Especialista em Funilaria e Pintura</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe1}
-              alt="Mecânico 2"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">Ana Costa</h3>
-            <p className="text-gray-600">Especialista em Suspensão e Freios</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe2}
-              alt="Diagnóstico 1"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">
-              Carlos Ferreira
-            </h3>
-            <p className="text-gray-600">
-              Especialista em Diagnóstico Eletrônico
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 text-center">
-            <img
-              src={Equipe3}
-              alt="Revisão 1"
-              className="w-24 h-24 mx-auto rounded-full mb-4"
-            />
-            <h3 className="text-xl font-semibold text-gray-800">
-              Luisa Pereira
-            </h3>
-            <p className="text-gray-600">
-              Especialista em Revisões e Manutenção
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

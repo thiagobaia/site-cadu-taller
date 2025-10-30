@@ -1,11 +1,9 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import { Banner, BannerCollapseButton } from "flowbite-react";
-import { HiArrowRight, HiX } from "react-icons/hi";
-import { MdPercent } from "react-icons/md";
 import { servicesData } from "../data/servicesData";
-import jovem from "../images/jovem-mecanico.jpg";
+import jovem from "../images/jovem-mecanico.webp";
 import { Link } from "gatsby";
+import itvCar from "../images/revisión-pre-itv.webp";
 
 const Services = () => {
   return (
@@ -26,6 +24,36 @@ const Services = () => {
           </p>
         </div>
       </div>
+
+      <section className="bg-transparent px-4 py-8 antialiased">
+        <div className="mx-auto grid max-w-6xl  rounded-lg bg-gray-50 p-4 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16">
+          <div className="lg:col-span-5 lg:mt-0">
+            <Link to="/contact">
+              <img
+                className="mb-4 h-56 w-56 sm:h-96 sm:w-96 md:h-full md:w-full"
+                src={itvCar}
+                alt="peripherals"
+              />
+            </Link>
+          </div>
+          <div className="me-auto place-self-center lg:col-span-7">
+            <h1 className="mb-3 text-2xl font-bold leading-tight tracking-tight text-gray-900 md:text-4xl">
+              Póngase en contacto para solicitar su presupuesto.
+            </h1>
+            <p className="mb-6 text-gray-500">
+              Estamos listos para servirle con eficiencia y calidad.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+            >
+              {" "}
+              Solicitar presupuesto{" "}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div
         className="max-w-6xl mx-auto lg:flex-wrap lg:flex mt-5 lg:my-10 lg:gap-5  bg-white border-none shadow-none"
         data-aos="fade-right"
@@ -43,44 +71,14 @@ const Services = () => {
               alt={item.title}
             />
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 {item.title}
               </h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {item.content}
-              </p>
+              <p className="mb-3 font-normal text-gray-700">{item.content}</p>
             </div>
           </div>
         ))}
       </div>
-
-      <Banner className="absolute top-36">
-        <div className="flex w-full justify-between bg-white/75 p-4">
-          <div className="mx-auto flex items-center">
-            <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-              <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 p-1 dark:bg-gray-600">
-                <MdPercent className="h-4 w-4" />
-              </span>
-              <span className="[&_p]:inline">
-                Obtenga un 5% de descuento&nbsp;
-                <Link
-                  to="https://w.app/7ptzv3"
-                  className="ml-0 flex items-center text-sm font-medium text-cyan-600 hover:underline md:ml-1 md:inline-flex dark:text-cyan-500"
-                >
-                  Llamar por whatsapp
-                  <HiArrowRight className="ml-2" />
-                </Link>
-              </span>
-            </p>
-          </div>
-          <BannerCollapseButton
-            color="gray"
-            className="border-0 bg-transparent text-gray-500 dark:text-gray-400"
-          >
-            <HiX className="h-4 w-4" />
-          </BannerCollapseButton>
-        </div>
-      </Banner>
     </Layout>
   );
 };
