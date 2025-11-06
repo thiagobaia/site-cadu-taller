@@ -45,7 +45,7 @@ export const Footer = () => {
 
           {/* Coluna 2: Pages */}
           <div className="w-full sm:w-1/2 lg:w-2/12 px-4 mb-8 lg:mb-0 lg:flex lg:flex-col lg:items-end">
-            <h3 className="text-lg font-semibold text-white mb-6">Pages</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">Paginas</h3>
             <ul className="text-blue-100 text-sm space-y-3 lg:flex lg:flex-col lg:justify-end lg:items-end">
               <li>
                 <Link to="/" className="hover:text-white">
@@ -71,7 +71,7 @@ export const Footer = () => {
           </div>
 
           <div className="w-full sm:w-1/2 lg:w-2/12 px-4 mb-8 lg:mb-0 lg:flex lg:flex-col lg:items-end">
-            <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">Servicios</h3>
             <ul className="text-blue-100 text-sm space-y-3 lg:flex lg:flex-col lg:justify-end lg:items-end">
               <li>
                 <Link to="/saas-development" className="hover:text-white">
