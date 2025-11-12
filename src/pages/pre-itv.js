@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import preItv from "../images/pre-itv.png";
 import BlogCard from "../components/Card";
 import qualities from "../data/qualities";
+import Equipe4 from "../images/avatar/avatar-4.png";
 
 const PreItv = () => {
   return (
@@ -123,7 +124,7 @@ const PreItv = () => {
             <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse px-8">
               <img
                 className="w-10 lg:w-14 rounded-full"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjWTiFpMlIhDE0FRAfTgXZH3JcKXEusxa17aY7--oV5ZFz1sh0M=w72-h72-p-rp-mo-br100"
+                src={Equipe4}
                 alt="Jose Padron Hernández"
               />
               <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500">

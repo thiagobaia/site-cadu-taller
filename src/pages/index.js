@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Loader from "../components/Loader";
 import RatingView from "../components/RatingView";
 import AccordionTaller from "../components/AccordionTaller";
+
 import { Link } from "gatsby";
 
 // Data mocks
@@ -19,6 +20,7 @@ import home1 from "../images/home-foto-01.jpg";
 import sobreNos from "../images/sobre-nos.jpg";
 import preItv from "../images/pre-itv.png";
 import itvCar from "../images/revisión-pre-itv.webp";
+import Carrousel from "../components/Carrousel";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -182,7 +184,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col gap-y-2.5 lg:flex-row">
                 <div className="flex flex-col gap-y-5 bg-white border border-gray-400 p-5 lg:w-full lg:max-w-[546px]">
-                  <p className="font-bold text-gray-500   font-roboto text-2xl text-center md:text-start md:text-3xl">
+                  <p className="font-bold text-black   font-roboto text-2xl text-center md:text-start md:text-3xl">
                     Crecimiento Sostenible
                   </p>
                   <p className="font-roboto text-gray-500  text-xl text-center md:text-start font-normal">
@@ -193,7 +195,7 @@ const Home = () => {
               </div>
               <div className="flex flex-col gap-y-2.5 lg:flex-row">
                 <div className="flex flex-col gap-y-5 bg-white border border-gray-400 p-5 lg:max-w-[546px]">
-                  <p className="font-bold text-gray-500  font-roboto text-2xl text-center md:text-start md:text-3xl">
+                  <p className="font-bold text-black font-roboto text-2xl text-center md:text-start md:text-3xl">
                     Mayor productividad y calidad
                   </p>
                   <p className="font-roboto text-gray-500  text-xl text-center md:text-start font-normal">
@@ -259,7 +261,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col w-full py-12 max-w-6xl gap-y-10 px-5 bg-white lg:pt-20 lg:pb-11">
+        <div className="flex flex-col items-center justify-center w-full py-12 max-w-6xl gap-y-10 px-5 bg-white lg:pt-20 lg:pb-11">
           <p
             className="text-2xl md:text-3xl lg:text-5xl font-bold text-center"
             data-aos="fade-left"
@@ -269,12 +271,7 @@ const Home = () => {
             Personas que confían en nuestro trabajo
           </p>
 
-          <div
-            className="grid mb-8 md:mb-12 md:grid-cols-2 bg-white"
-            data-aos="fade-right"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-sine"
-          >
+          <Carrousel>
             {reviewsData.map((item, index) => (
               <RatingView
                 key={index}
@@ -285,7 +282,13 @@ const Home = () => {
                 text={item.text}
               />
             ))}
-          </div>
+          </Carrousel>
+          <a
+            className="uppercase text-sm text-blue-600"
+            href="https://share.google/rU0vc6RAdw7oLc8CR"
+          >
+            Ver todas las reseñas aquí
+          </a>
         </div>
 
         <div
@@ -350,7 +353,7 @@ const Home = () => {
           <div className="lg:col-span-5 lg:mt-0">
             <Link to="/contact">
               <img
-                className="mb-4 h-auto w-full sm:h-96 sm:w-96 md:h-full md:w-full"
+                className="mb-4 h-auto w-full md:h-full md:w-full"
                 src={itvCar}
                 alt="peripherals"
               />

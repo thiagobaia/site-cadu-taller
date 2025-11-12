@@ -3,9 +3,9 @@ import Layout from "../components/Layout";
 import PerfilPhoto from "../images/cadu-taller-sobre-nos.jpeg";
 import BannerPhoto from "../images/banner-nosotros.jpg";
 
-//import Equipe1 from "../images/equipe-1.jpg";
-//import Equipe2 from "../images/equipe-2.jpg";
-//import Equipe3 from "../images/equipe-3.jpg";
+import Equipe1 from "../images/equipo/Daniel-Possenti-Mecánico-sénior.jpeg";
+import Equipe2 from "../images/equipo/Luan-Meneghin-Mecánico-sénior.jpeg";
+import Equipe3 from "../images/equipo/Giselle-do-Carmo-Secretaría.jpeg";
 
 import { Link } from "gatsby";
 
@@ -121,91 +121,47 @@ const About = () => {
             <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div className="text-center text-gray-500">
                 <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                  alt="Bonnie Avatar"
+                  className="mx-auto mb-4 w-36 h-36 rounded-full object-cover object-top"
+                  src={PerfilPhoto}
+                  alt="Carlos Eduardo - Mecánico Propietario"
                 />
                 <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Bonnie Green</Link>
+                  <Link to="#">Carlos Eduardo</Link>
                 </h3>
-                <p>CEO/Co-founder</p>
+                <p>Mecánico Propietario</p>
               </div>
               <div className="text-center text-gray-500">
                 <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
-                  alt="Helene Avatar"
+                  className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
+                  src={Equipe1}
+                  alt="Daniel Possenti Mecánico Sénior"
                 />
                 <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Helene Engels</Link>
+                  <Link to="#">Daniel Possenti</Link>
                 </h3>
-                <p>CTO/Co-founder</p>
+                <p>Mecánico Sénior</p>
               </div>
               <div className="text-center text-gray-500">
                 <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                  alt="Jese Avatar"
+                  className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
+                  src={Equipe2}
+                  alt="Luan Meneghin - Mecánico Sénior"
                 />
                 <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Jese Leos</Link>
+                  <Link to="#">Luan Meneghin</Link>
                 </h3>
-                <p>SEO & Marketing</p>
+                <p>Mecánico Sénior</p>
               </div>
               <div className="text-center text-gray-500">
                 <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
-                  alt="Joseph Avatar"
+                  className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
+                  src={Equipe3}
+                  alt="Giselle do Carmo - Secretaría"
                 />
                 <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Joseph Mcfall</Link>
+                  <Link to="#">Giselle do Carmo</Link>
                 </h3>
-                <p>Sales</p>
-              </div>
-              <div className="text-center text-gray-500">
-                <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png"
-                  alt="Sofia Avatar"
-                />
-                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Lana Byrd</Link>
-                </h3>
-                <p>Web Designer</p>
-              </div>
-              <div className="text-center text-gray-500">
-                <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png"
-                  alt="Leslie Avatar"
-                />
-                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Leslie Livingston</Link>
-                </h3>
-                <p>Graphic Designer</p>
-              </div>
-              <div className="text-center text-gray-500">
-                <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                  alt="Michael Avatar"
-                />
-                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Michael Gough</Link>
-                </h3>
-                <p>React Developer</p>
-              </div>
-              <div className="text-center text-gray-500">
-                <img
-                  className="mx-auto mb-4 w-36 h-36 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png"
-                  alt="Neil Avatar"
-                />
-                <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                  <Link to="#">Neil Sims</Link>
-                </h3>
-                <p>Vue.js Developer</p>
+                <p>Secretaría</p>
               </div>
             </div>
           </div>

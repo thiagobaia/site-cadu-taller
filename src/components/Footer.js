@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../images/logo-cadu.png";
 import { Link } from "gatsby";
+import { FaRegCopyright } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-blue-700 pt-16 pb-6 lg:pt-20 lg:pb-10 overflow-hidden">
+    <footer className="relative bg-blue-700 pt-16 lg:pt-20 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full">
         <span className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-600 rounded-full opacity-50 transform translate-x-1/2 translate-y-1/2"></span>
         <span className="absolute top-1/4 right-1/4 w-40 h-40 bg-blue-600 rounded-full opacity-50 transform -translate-x-1/2 -translate-y-1/2"></span>
@@ -14,7 +15,7 @@ export const Footer = () => {
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
         {" "}
         <div className="flex flex-wrap -mx-4 justify-between">
-          <div className="w-full lg:w-4/12 px-4 mb-8 lg:mb-0">
+          <div className="w-full lg:w-4/12 px-4 mb-8 lg:mb-5">
             <Link to="/" className="inline-flex items-center mb-6">
               <img src={logo} className="h-20" alt="Flowbite Logo" />
 
@@ -122,6 +123,18 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col justify-center items-center gap-x-2 gap-y-2.5 py-5 bg-blue-800">
+        <span className="text-white flex items-center gap-x-1.5 text-sm">
+          <FaRegCopyright className="h-4 w-4 text-white" />
+          {new Date().getFullYear()} Cadu Taller - Todos direitos reservados.
+        </span>
+        <Link
+          to="https://www.mastercreator.tech"
+          className="text-white text-xs font-light"
+        >
+          Desenvolvido por MasterCreator ❤️
+        </Link>
       </div>
     </footer>
   );

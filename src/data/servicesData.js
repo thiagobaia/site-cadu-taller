@@ -1,15 +1,15 @@
 import MecánicaGeneral from "../images/services/mecanica-geral.jpg";
-import BateríasSistemaEléctrico from "../images/services/Baterías-sistema-eléctrico.jpeg";
+import BateríasSistemaEléctrico from "../images/services/Baterías-sistema-eléctrico.jpg";
 import CambioAceiteFiltros from "../images/services/Cambio-aceite-filtros.jpg";
 import CentralitasMecatrónica from "../images/services/Centralitas-Mecatrónica.jpg";
-import DiagnósticoElectrónico from "../images/services/Diagnóstico-electrónico.jpeg";
-import Distribución from "../images/services/Distribución-correa-cadena.jpeg";
-import EmbragueTransmisión from "../images/services/Embrague-transmisión.jpeg";
+import DiagnósticoElectrónico from "../images/services/Diagnóstico-electrónico.jpg";
+import Distribución from "../images/services/Distribución-correa-cadena.jpg";
+import EmbragueTransmisión from "../images/services/Embrague-transmisión.jpg";
 import MantenimientoPreventivo from "../images/services/mantenimiento-preventivo.jpg";
-import ReparaciónMotor from "../images/services/Reparación-motor.jpeg";
+import ReparaciónMotor from "../images/services/Reparación-motor.jpg";
 import RevisiónPreITV from "../images/services/Revisión-pre-ITV.jpg";
-import SistemaEscape from "../images/services/Sistema-escape.jpeg";
-import SuspensiónAmortiguadores from "../images/services/Suspensión-amortiguadores.jpeg";
+import SistemaEscape from "../images/services/Sistema-escape.jpg";
+import SuspensiónAmortiguadores from "../images/services/Suspensión-amortiguadores.jpg";
 import FrenosPastillas from "../images/services/Frenos-pastillas-freno.jpg";
 
 export const servicesData = [
