@@ -3,9 +3,11 @@ import emailjs from "@emailjs/browser";
 import { Toast } from "flowbite-react";
 import { HiCheck, HiExclamation, HiX } from "react-icons/hi";
 
-const SERVICE_ID = process.env.GATSBY_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.GATSBY_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.GATSBY_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = "service_msjzmo4";
+const TEMPLATE_ID = "template_sj083sc";
+const PUBLIC_KEY = "Zzn1TBDs6kIjgUSEs";
+
+console.log(SERVICE_ID);
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
