@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <main>{children}</main>
       <FloatingWhatsApp
-        phoneNumber="+5594992922453"
+        phoneNumber="+34642594689"
         accountName="Cadu Taller"
         avatar={avatarWhats}
         statusMessage="Suele responder en menos de una hora."

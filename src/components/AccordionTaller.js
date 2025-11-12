@@ -8,7 +8,7 @@ import {
 
 export const AccordionTaller = ({ title, resp }) => {
   return (
-    <Accordion collapseAll>
+    <Accordion clearTheme={true} collapseAll>
       <AccordionPanel>
         <AccordionTitle className="border border-gray-400 rounded-md">
           <p className="px-2.5 w-full text-[18px] md:text-2xl">{title}</p>
