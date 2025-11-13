@@ -127,13 +127,14 @@ export const Footer = () => {
       <div className="flex flex-col justify-center items-center gap-x-2 gap-y-2.5 py-5 bg-blue-800">
         <span className="text-white flex items-center gap-x-1.5 text-sm">
           <FaRegCopyright className="h-4 w-4 text-white" />
-          {new Date().getFullYear()} Cadu Taller - Todos direitos reservados.
+          {new Date().getFullYear()} Cadu Taller - Reservados todos los
+          derechos.
         </span>
         <Link
           to="https://www.mastercreator.tech"
-          className="text-white text-xs font-light"
+          className="text-blue-100 text-xs font-light"
         >
-          Desenvolvido por MasterCreator ❤️
+          Desarrollado por MasterCreator ❤️
         </Link>
       </div>
     </footer>
