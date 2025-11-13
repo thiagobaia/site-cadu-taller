@@ -132,7 +132,7 @@ export const Footer = () => {
         </p>
         <a
           href="https://www.mastercreator.tech/"
-          className="text-blue-100 text-xs font-light z-10"
+          className="text-white hover:text-red-400 text-xs font-light z-10 cursor-pointer"
           target="_blank" // Abre o link em uma nova aba
           rel="noopener noreferrer" // Corrige a vulnerabilidade de segurança (tabnabbing)
         >
