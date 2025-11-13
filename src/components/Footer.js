@@ -125,17 +125,19 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center gap-x-2 gap-y-2.5 py-5 bg-blue-800">
-        <span className="text-white flex items-center gap-x-1.5 text-sm">
+        <p className="text-white flex items-center gap-x-1.5 text-sm">
           <FaRegCopyright className="h-4 w-4 text-white" />
           {new Date().getFullYear()} Cadu Taller - Reservados todos los
           derechos.
-        </span>
-        <Link
-          to="https://www.mastercreator.tech"
-          className="text-blue-100 text-xs font-light"
+        </p>
+        <a
+          href="https://www.mastercreator.tech/"
+          className="text-blue-100 text-xs font-light z-10"
+          target="_blank" // Abre o link em uma nova aba
+          rel="noopener noreferrer" // Corrige a vulnerabilidade de segurança (tabnabbing)
         >
           Desarrollado por MasterCreator ❤️
-        </Link>
+        </a>
       </div>
     </footer>
   );
