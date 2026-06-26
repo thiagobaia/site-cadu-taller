@@ -1,6 +1,6 @@
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import { FloatingWhatsApp } from "@dxkit-org/react-floating-whatsapp";
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import avatarWhats from "../images/cadu-taller-sobre-nos.jpeg";
